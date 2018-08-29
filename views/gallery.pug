@@ -1,0 +1,40 @@
+block content
+	
+	.page-header
+		h1= title
+	
+	if single
+		.gif-entry
+			img(src=image)
+	else
+		#gallery
+			each image in images
+				.gif-entry
+					img(src=image)
+	//Only display paginator if 'pages' is passed in
+	if pages
+		.row
+			.col-md-12.text-center
+				nav(aria-label="Page navigation")
+					ul.pagination
+						if paginate.hasPreviousPages
+							li.previous
+								a(href=paginate.href(true) aria-label="Previous" class="prev ajaxCaller")
+									span(aria-hidden="true") &laquo;
+						each page in pages
+							li
+								a(href=page.url class="ajaxCaller")= page.number
+						if paginate.hasNextPages(pageCount)
+							li.next
+								a(href=paginate.href() aria-label="Next" class="prev ajaxCaller")
+									span(aria-hidden="true") &raquo;
+		#dropdownLimitContainer.text-center
+			.dropdown.btn-group
+				button(class="btn btn-default dropdown-toggle" type="button" id="dropdownLimit" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true")= currentLimit + " "
+					span.caret
+				ul(class="dropdown-menu" aria-labelledby="dropdownLimit")
+					each val in limitsArray
+						li
+							a(href=paginate.href(params={ page: currentPage, limit: val }) class="ajaxCaller")= val
+			span.vcenter
+				| GIFs per page

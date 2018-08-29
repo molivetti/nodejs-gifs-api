@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-gifs-api",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "node index.js",
+    "docker-start": "docker-compose up",
+    "docker-background": "docker-compose up -d",
+    "docker-stop": "docker-compose down"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-paginate": "^1.0.0",
+    "pug": "^2.0.3",
+    "request": "^2.87.0"
+  },
+  "engines": {
+    "node": ">=7.6.0"
+  }
+}

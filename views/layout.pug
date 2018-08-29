@@ -1,0 +1,23 @@
+doctype html
+html  
+	head
+		title= title
+		link(rel="stylesheet", href="vendor/bootstrap/css/bootstrap.min.css")
+		link(rel="stylesheet", href="vendor/bootstrap/css/ie10-viewport-bug-workaround.css")
+		link(rel="stylesheet", href="main.css")
+	
+	body
+
+		.container
+
+			include nav
+		
+			#content
+				block content
+
+			include footer
+
+		script(src='vendor/bootstrap/js/ie10-viewport-bug-workaround.js')
+		script(src='vendor/jquery/jquery.min.js')
+		script(src='vendor/bootstrap/js/bootstrap.min.js')
+		script(src='main.js')
