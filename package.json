@@ -8,10 +8,11 @@
     "docker-stop": "docker-compose down"
   },
   "dependencies": {
-    "express": "^4.16.3",
+    "express": "^4.17.1",
     "express-paginate": "^1.0.0",
-    "pug": "^2.0.3",
-    "request": "^2.87.0"
+    "npm": "^6.12.1",
+    "pug": "^2.0.4",
+    "request": "^2.88.0"
   },
   "engines": {
     "node": ">=7.6.0"
