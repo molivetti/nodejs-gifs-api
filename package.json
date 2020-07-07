@@ -10,7 +10,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-paginate": "^1.0.0",
-    "npm": "^6.12.1",
+    "npm": "^6.14.6",
     "pug": "^2.0.4",
     "request": "^2.88.0"
   },
